@@ -1,0 +1,136 @@
+.main_questions {
+    padding-top: vw(44);
+    padding-bottom: vw(85);
+    @media all and (max-width: 1023px) {
+        padding-top: 36px;
+        padding-bottom: 72px;
+    }
+    &__title {
+        color: var(--Black, #B6C1DD);
+        font-family: 'EuropeExtendedC', sans-serif, cursive;
+        font-size: vw(40);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        margin-bottom: vw(32);
+        br {
+            display: none;
+            @media all and (max-width: 1023px) {
+                display: block;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            margin-bottom: 24px;
+            font-size: 32px;
+        }
+    }
+    &__items {
+        display: flex;
+        align-items: flex-start;
+        @media all and (max-width: 1023px) {
+            flex-direction: column-reverse;
+        }
+    }
+    &__questiions {
+        padding-right: vw(36);
+        @media all and (max-width: 1023px) {
+            padding-right: 0;
+        }
+    }
+    &__block {
+        border-radius: 5px;
+        background: var(--white, #FFF);
+        padding: vw(24);
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-bottom: vw(16);
+            @media all and (max-width: 1023px) {
+                margin-bottom: 16px;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            padding: 24px;
+            border-radius: 12px;
+        }
+        &.isActive {
+            &:before {
+                transform: rotate(180deg);
+            }
+            .main_questions__answer {
+                display: block;
+            }
+            .main_questions__question {
+                color: var(--Gold, #1229FE);
+                &:before {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    &__question {
+        color: var(--Black, #313132);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(20);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        position: relative;
+        padding-right: vw(25);
+        @media all and (max-width: 1023px) {
+            font-size: 18px;
+            padding-right: 25px;
+            line-height: 130%;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: vw(20);
+            height: vw(20);
+            margin-top: vw(-10);
+            background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.5999 7.45837L11.1666 12.8917C10.5249 13.5334 9.4749 13.5334 8.83324 12.8917L3.3999 7.45837' stroke='%23313132' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% / 100% no-repeat;
+            @media all and (max-width: 1023px) {
+                width: 20px;
+                height: 20px;
+                margin-top: -10px;
+            }
+        }
+    }
+    &__answer {
+        color: var(--Black, #313132);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        padding-top: vw(24);
+        margin-top: vw(20);
+        display: none;
+        border-top: 1px solid #EFEFEF;
+        * {
+            font-family: 'Gilroy', sans-serif, cursive;
+            font-size: vw(16);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            @media all and (max-width: 1023px) {
+                font-size: 16px;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            padding-top: 24px;
+            margin-top: 20px;
+            padding-top: 16px;
+            font-size: 16px;
+        }
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

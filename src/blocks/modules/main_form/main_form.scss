@@ -1,0 +1,227 @@
+.main_form {
+    padding-top: vw(64);
+    position: relative;
+    z-index: 2;
+    @media all and (max-width: 1023px) {
+        padding-top: 0;
+        box-shadow: 0px 45px 45px 0px rgba(40, 43, 57, 0.20);
+        margin-bottom: -501px;
+        overflow: hidden;
+        width: 100%;
+        border-radius: 8px;
+    }
+    &__blocks {
+        position: relative;
+    }
+    &__block {
+        position: relative;
+        z-index: 2;
+        padding: vw(24);
+        border-radius: 8px;
+        background: var(--light-grey, #fff);
+        @media all and (max-width: 1023px) {
+            border-radius: 8px;
+            padding: 24px;
+        }
+    }
+    &__title {
+        margin-bottom: vw(26);
+        color: var(--Black, #313132);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(24);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        @media all and (max-width: 1023px) {
+            margin-bottom: 32px;
+            font-size: 24px;
+        }
+    }
+    &__slide {
+        &:not(:last-child) {
+            margin-bottom: vw(32);
+            @media all and (max-width: 1023px) {
+                margin-bottom: 32px;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            margin-bottom: 24px;
+            width: 100%;
+            margin-left: 0;
+            border-radius: 8px;
+            margin-right: 0;
+        }
+    }
+    &__span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: vw(16);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 16px;
+        }
+        & > span {
+            color: var(--Darck-grey, #666);
+            font-family: 'Gilroy', sans-serif, cursive;
+            font-size: vw(16);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+            display: inline-block;
+            @media all and (max-width: 1023px) {
+                font-size: 16px;
+            }
+        }
+    }
+    &__number {
+        color: var(--Black, #313132);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(24);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        border-radius: 8px;
+        background: #F7F7FA;
+        padding: vw(10) vw(16);
+        @media all and (max-width: 1023px) {
+            font-size: 18px;
+            padding: 10px 16px;
+        }
+    }
+    .noUi-target {
+        box-shadow: none;
+        border: 0;
+        height: vw(26);
+        overflow: hidden;
+        background: none;
+        border-radius: 0px;
+        padding-top: vw(12);
+        * {
+            transition: unset;
+        }
+        @media all and (max-width: 1023px) {
+            padding-top: 12px;
+            height: 26px;
+        }
+        .noUi-base {
+            .noUi-connects {
+                height: 4px;
+                border-radius: 20px;
+                background: var(--light-grey-line, #E1E1E1);
+            }
+        }
+        .noUi-origin {
+            height: 4px;
+            border-radius: 20px;
+            background: var(--green, #1229FE);
+            .noUi-handle {
+                width: vw(24);
+                height: vw(24);
+                border: vw(2) solid #666;
+                border-radius: 20px;
+                box-shadow: none;
+                top: vw(-11);
+                right: vw(-12);
+                cursor: pointer;
+                @media all and (max-width: 1023px) {
+                    width: 24px;
+                    height: 24px;
+                    top: -12px;
+                    border: 2px solid #666;
+                    right: -12px;
+                }
+                &:before, &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__values {
+        display: flex;
+        justify-content: space-between;
+        padding-top: vw(6);
+        @media all and (max-width: 1023px) {
+            padding-top: 10px;
+        }
+    }
+    &__value {
+        color: var(--Darck-grey, #666);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+    &__btn {
+        display: inline-block;
+        background: var(--Liner-Blue, linear-gradient(90deg, #1229FE 0%, #0085FF 100%));
+        box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.05);
+        color: #fff;
+        text-align: center;
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 600;
+        cursor: pointer;
+        border: 0;
+        line-height: 100%;
+        width: 100%;
+        transition: unset;
+        padding: vw(20) vw(52);
+        border-radius: 5px;
+        &:hover {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.18) 100%), linear-gradient(90deg, #1229FE 0%, #0085FF 100%);
+        }
+        &:active {
+            background: var(--Darck-Blue, #0A309B);
+        }
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
+            padding: 22px 35px;
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+    &__lists {
+        margin-top: vw(24);
+        display: flex;
+        margin-bottom: vw(24);
+        justify-content: space-between;
+        @media all and (max-width: 1023px) {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+    }
+    &__list {
+        width: calc(50% - vw(20));
+        @media all and (max-width: 1023px) {
+            width: calc(50% - 15px);
+        }
+        span {
+            color: var(--Gray, #666);
+            font-family: 'Gilroy', sans-serif, cursive;
+            font-size: vw(14);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            @media all and (max-width: 1023px) {
+                font-size: 14px;
+            }
+        }
+        &--text {
+            color: var(--Gray, #313132);
+            font-family: 'Gilroy', sans-serif, cursive;
+            font-size: vw(14);
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+            @media all and (max-width: 1023px) {
+                font-size: 16px;
+            }
+        }
+    }
+}

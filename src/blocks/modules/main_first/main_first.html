@@ -1,0 +1,65 @@
+<section id="main_first" class="main_first">
+    <div class="main_first__bg" v-if="sizes.window >= 1023">
+        <img src="./img/bg_first.png" alt="">
+    </div>
+    <div class="main_first__in center_block">
+        <div class="main_first__l-side">
+            <div class="main_first__title">Получи первый <br>онлайн заём <br>под 0%*</div>
+            <div class="main_first__text">До 30 000 рублей, до 21 дня — без процентов!</div>
+            <div class="main_first__cost">Деньги у вас в 12:03</div>
+        </div>
+        <div class="main_first__bg" v-if="sizes.window <= 1023">
+            <img src="./img/bg_first_mob.png" alt="">
+        </div>
+        <div class="main_first__r-side">
+            <div id="main_form" class="main_form">
+                <div class="main_form__in">
+                    <div class="main_form__blocks">
+                        <div class="main_form__block">
+                            <div class="main_form__title">Первый заем бесплатно</div>
+                            <div class="main_form__slides">
+                                <div class="main_form__slide">
+                                    <div class="main_form__span">
+                                        <span>Выбрать сумму</span>
+                                        <div class="main_form__number">
+                                            <div id="slider-range-value"></div>
+                                        </div>
+                                    </div>
+                                    <div id="rangeSlider"></div>
+                                    <div class="main_form__values">
+                                        <div class="main_form__value">1 000 ₽</div>
+                                        <div class="main_form__value">50 000 ₽</div>
+                                    </div>
+                                </div>
+                                <div class="main_form__slide">
+                                    <div class="main_form__span">
+                                        <span>Выбрать cрок займа</span>
+                                        <div class="main_form__number">
+                                            <div id="slider-range-value2"></div>
+                                        </div>
+                                    </div>
+                                    <div id="rangeSlider2"></div>
+                                    <div class="main_form__values">
+                                        <div class="main_form__value">1 день</div>
+                                        <div class="main_form__value">30 день</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main_form__lists">
+                                <div class="main_form__list">
+                                    <span>Вы возвращаете</span>
+                                    <div id="rangeCost" class="main_form__list--text"></div>
+                                </div>
+                                <div class="main_form__list">
+                                    <span>До (включительно)</span>
+                                    <div class="main_form__list--text">21.02.2024</div>
+                                </div>
+                            </div>
+                            <button class="main_form__btn" data-modal-id="3">Получить деньги</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

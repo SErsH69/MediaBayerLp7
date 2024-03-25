@@ -1,0 +1,16 @@
+<div class="main_info">
+    <div class="main_info__in center_block">
+        <div class="main_info__l-side">
+            <div class="main_info__title">Первый заем-бесплатно</div>
+            <div class="main_info__subtitle">на срок до 21 дня
+                <br>на сумму до 30 000 ₽</div>
+            <div class="main_info__percent">0% в день</div>
+            <button class="main_info__btn" data-modal-id="3">Получить деньги</button>
+        </div>
+        <div class="main_info__r-side">
+            <img class="main_info__img1" v-if="sizes.window >= 1023" src="./img/card2.png" alt="">
+            <img class="main_info__img2" v-if="sizes.window >= 1023" src="./img/card1.png" alt="">
+            <img src="./img/card3.png" v-if="sizes.window <= 1023" alt="">
+        </div>
+    </div>
+</div>
